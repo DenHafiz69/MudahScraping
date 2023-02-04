@@ -3,7 +3,7 @@ import pandas as pd
 
 # import the csv file
 
-df = pd.read_csv("housing.csv")
+df = pd.read_csv("housing_price_data.csv")
 
 # define some functions to clean the price, size, and no of bedroom
 

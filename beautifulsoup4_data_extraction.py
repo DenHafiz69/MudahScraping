@@ -16,7 +16,7 @@ location_class = "sc-gqPbQI jcysAz"
 outer_class = "sc-eerKOB kYoUWg"
 inner_class = "sc-emmjRN jodtUm"
 
-with open('housing.csv', 'w', encoding='utf8', newline='') as f:
+with open('housing_price_data.csv', 'w', encoding='utf8', newline='') as f:
 
   thewriter = writer(f)
   header =['Title', 'Price', 'Location', 'Size', 'Bedroom']
