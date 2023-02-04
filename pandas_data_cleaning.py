@@ -21,3 +21,7 @@ def extract_bed(text):
 df['Price'] = df['Price'].apply(extract_price)
 df['Size'] = df['Size'].apply(extract_size)
 df['Bedroom'] = df['Bedroom'].apply(extract_bed)
+
+# save the modified DataFrame back to the CSV file
+
+df.to_csv("housing_price_data.csv", index=False)
