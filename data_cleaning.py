@@ -18,9 +18,9 @@ def extract_bed(text):
 
 # convert all the data from strings with unnecessary text into integers
 
-df['Price'] = df['Price'].apply(extract_price)
-df['Size'] = df['Size'].apply(extract_size)
-df['Bedroom'] = df['Bedroom'].apply(extract_bed)
+df['Price'] = df['price'].apply(extract_price)
+df['Size'] = df['size'].apply(extract_size)
+df['Bedroom'] = df['bedroom'].apply(extract_bed)
 
 # save the modified DataFrame back to the CSV file
 
