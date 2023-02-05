@@ -19,7 +19,7 @@ inner_class = "sc-emmjRN jodtUm"
 with open('housing_price_data.csv', 'w', encoding='utf8', newline='') as f:
 
   thewriter = writer(f)
-  header =['Title', 'Price', 'Location', 'Size', 'Bedroom']
+  header =['title', 'price', 'location', 'size', 'bedroom']
 
   thewriter.writerow(header)
 
