@@ -20,8 +20,8 @@ def extract_bed(text):
 
 if df['price'].dtype == str: # check whether data has been converted or not
   df['price'] = df['price'].apply(extract_price)
-  df['price'] = df['size'].apply(extract_size)
-  df['price'] = df['bedroom'].apply(extract_bed)
+  df['size'] = df['size'].apply(extract_size)
+  df['bedroom'] = df['bedroom'].apply(extract_bed)
 
 # save the modified DataFrame back to the CSV file
 
