@@ -23,7 +23,7 @@ with open('housing_price_data.csv', 'w', encoding='utf8', newline='') as f:
 
   thewriter.writerow(header)
 
-  for reps in range(1, 20):
+  for reps in range(1, 20): # 20 here is the final page that I want it to cycle to
 
     url = url_func(str(reps))
     page = requests.get(url)
