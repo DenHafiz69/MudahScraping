@@ -4,7 +4,20 @@ from csv import writer
 
 # function to change url to next page
 
-def url_func(page):
+def new_page_url(page):
+  '''A function to get the next page url
+
+  Parameter(s)
+  ----------
+  page : int
+    The page number intended to go
+  
+  Returns
+  -------
+  url : str
+    The new url to load
+  '''
+
   return "https://www.mudah.my/kuala-lumpur/apartment-condominium-for-rent?o=" + page
 
 # definition of classes in case it does not work again, need to change here
@@ -25,7 +38,7 @@ with open('housing_price_data.csv', 'w', encoding='utf8', newline='') as f:
 
   for reps in range(1, 20): # 20 here is the final page that I want it to cycle to
 
-    url = url_func(str(reps))
+    url = new_page_url(str(reps))
     page = requests.get(url)
 
     soup = BeautifulSoup(page.content, 'html.parser')
