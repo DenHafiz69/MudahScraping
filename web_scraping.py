@@ -2,7 +2,7 @@ from bs4 import BeautifulSoup
 import requests
 from csv import writer
 
-# function to change url to next page
+# Function to change url to next page
 
 def new_page_url(page):
   '''A function to get the next page url
@@ -20,7 +20,7 @@ def new_page_url(page):
 
   return "https://www.mudah.my/kuala-lumpur/apartment-condominium-for-rent?o=" + page
 
-# definition of classes in case it does not work again, need to change here
+# Definition of classes in case it does not work again, need to change here
 
 main_class = "sc-cQFLBn jkvPib"
 title_class = "sc-fYiAbW infEfr"
@@ -29,6 +29,9 @@ location_class = "sc-gqPbQI jcysAz"
 outer_class = "sc-eerKOB kYoUWg"
 inner_class = "sc-emmjRN jodtUm"
 
+# Maximum pages that want to be travelled
+max_page = 20
+
 with open('housing_price_data.csv', 'w', encoding='utf8', newline='') as f:
 
   thewriter = writer(f)
@@ -36,7 +39,7 @@ with open('housing_price_data.csv', 'w', encoding='utf8', newline='') as f:
 
   thewriter.writerow(header)
 
-  for reps in range(1, 20): # 20 here is the final page that I want it to cycle to
+  for reps in range(1, max_page):
 
     url = new_page_url(str(reps))
     page = requests.get(url)
